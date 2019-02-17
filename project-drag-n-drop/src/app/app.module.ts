@@ -5,12 +5,12 @@ import { MatExpansionModule } from '@angular/material';
 import { AppComponent } from './app.component';
 import { SkyhookDndModule } from "@angular-skyhook/core";
 import { default as HTML5Backend } from 'react-dnd-html5-backend';
-import { SidebarComponent } from './sidebar/sidebar.component';
+
 
 
 @NgModule({
   declarations: [
-    AppComponent, SidebarComponent
+    AppComponent, 
   ],
   imports: [
     BrowserModule, 
