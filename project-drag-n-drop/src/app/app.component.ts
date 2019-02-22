@@ -7,6 +7,7 @@ import {CdkDragDrop, moveItemInArray, transferArrayItem} from '@angular/cdk/drag
 })
 export class AppComponent {
   title = 'project-drag-n-drop';
+  abilityScores = [8,10, 12, 13, 14, 15];
   race = [
     'Human',
     'Elf',

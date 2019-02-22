@@ -24,22 +24,26 @@
     </div>
   </div>
  <mat-grid-list cols="1" rowHeight="2:1">
-  <mat-grid-tile>1
-    <div class="example-container">
+  <mat-grid-tile>
+    <h2>Ability Scores</h2>
+    <div cdkDropList cdkDropListOrientation="horizontal" class="example-list" (cdkDropListDropped)="drop($event)">
+        <div class="example-box" *ngFor="let score of abilityScores" cdkDrag>{{score}}</div>
+      </div>
+  </mat-grid-tile>
+  <mat-grid-tile>
     <h2>Race</h2>
-  
-    <div
-      cdkDropList
-      #selectedRaceList="cdkDropList"
-      [cdkDropListData]="selectedRace"
-      [cdkDropListConnectedTo]="[raceList]"
-      class="example-list"
-      (cdkDropListDropped)="drop($event)">
-      <div class="example-box" *ngFor="let item of selectedRace" cdkDrag>{{item}}</div>
+    <div class="example-container">
+      <div
+        cdkDropList
+        #selectedRaceList="cdkDropList"
+        [cdkDropListData]="selectedRace"
+        [cdkDropListConnectedTo]="[raceList]"
+        class="example-list"
+        (cdkDropListDropped)="drop($event)">
+        <div class="example-box" *ngFor="let item of selectedRace" cdkDrag>{{item}}</div>
+      </div>
     </div>
-  </div>
-</mat-grid-tile>
-  <mat-grid-tile>2</mat-grid-tile>
+  </mat-grid-tile>
   <mat-grid-tile>3</mat-grid-tile>
   <mat-grid-tile>4</mat-grid-tile>
 </mat-grid-list> 
